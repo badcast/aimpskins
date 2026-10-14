@@ -59,7 +59,7 @@ def main():
         rows.append([len(rows) + 1, name, version, author, link, "SKIP"])
 
     with open(OUT, "w", encoding="utf-8-sig", newline="") as f:
-        w = csv.writer(f, quoting=csv.QUOTE_ALL, lineterminator="\r\n")
+        w = csv.writer(f, quoting=csv.QUOTE_ALL, lineterminator="\n")
         w.writerow(["number", "name", "version", "author", "link", "sha256"])
         w.writerows(rows)
 
